@@ -13,7 +13,7 @@
     <RepositoryUrl>https://github.com/emre-gon/Sl.WebExtensions</RepositoryUrl>
     <PackageProjectUrl>https://github.com/emre-gon/Sl.WebExtensions</PackageProjectUrl>
     <Copyright>2022</Copyright>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseFile></PackageLicenseFile>
     <Authors>emre-gon</Authors>
   </PropertyGroup>
 
