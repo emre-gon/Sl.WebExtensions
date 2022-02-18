@@ -1,21 +1,20 @@
-[![NuGet](https://img.shields.io/nuget/v/Sl.WebEtensions.svg)](https://www.nuget.org/packages/Sl.WebEtensions)
+[![NuGet](https://img.shields.io/nuget/v/Sl.WebExtensions.svg)](https://www.nuget.org/packages/Sl.WebExtensions)
 
-# Sl.WebEtensions
+# Sl.WebExtensions
 
-###HttpException
+### HttpException
 
-###AuthorizationFilters
-BasicAuth
-BearerAuth
+### AuthorizationFilters
+### BasicAuth
+### BearerAuth
 
-
-###
+-----
 
 
 ## Installation
 
 ```
-dotnet add package Sl.WebEtensions
+dotnet add package Sl.WebExtensions
 ```
 
 ## Authors <a name = "authors"></a>
