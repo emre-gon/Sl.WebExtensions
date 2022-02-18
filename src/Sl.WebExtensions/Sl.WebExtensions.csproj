@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <AssemblyVersion>1.2.2.0</AssemblyVersion>
     <FileVersion>1.2.2.0</FileVersion>
     <PackageReleaseNotes>Confirm Dialogs</PackageReleaseNotes>
@@ -15,6 +15,7 @@
     <Copyright>2022</Copyright>
     <PackageLicenseFile></PackageLicenseFile>
     <Authors>emre-gon</Authors>
+    <Description>Auth Filters, Custom Validators, JsonExtensions</Description>
   </PropertyGroup>
 
   <ItemGroup>
