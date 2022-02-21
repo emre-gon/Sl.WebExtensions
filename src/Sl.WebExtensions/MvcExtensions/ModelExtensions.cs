@@ -75,7 +75,7 @@ namespace Sl.WebExtensions
 
 
 
-        public static Dictionary<string, object> GetIDValues(this CrudModelBase Model)
+        public static Dictionary<string, object> GetIDValues(this object Model)
         {
             var props = Model.GetType().GetProperties(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.DeclaredOnly)
                                             .Where(f => f.GetCustomAttributes(typeof(KeyAttribute), false).Any());
@@ -88,12 +88,35 @@ namespace Sl.WebExtensions
 
             return toBeReturned;
         }
+
+
+        public static T GetID<T>(this object Model)
+        {
+            var idValues = Model.GetIDValues();
+            if(idValues.Count == 0)
+            {
+                throw new Exception("No Id column is defined for type: " + Model.GetType().FullName);
+            }
+            else if(idValues.Count > 1)
+            {
+                throw new Exception("GetID cannot be used with objects with composite keys. Type: " + Model.GetType().FullName);
+            }
+
+            var value = idValues.First().Value;
+
+            if(!(value is T))
+            {
+                throw new Exception("GetID could not convert Key property" + idValues.First().Key + " into "+typeof(T).FullName+" in Type:" + Model.GetType().FullName);
+            }
+
+            return (T)value;            
+        }
     }
 
 
 
 
-    public abstract class CrudModelBase
+    public abstract class ModelBase
     {
         public override string ToString()
         {
