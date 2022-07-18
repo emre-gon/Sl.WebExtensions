@@ -1,4 +1,5 @@
-﻿using Sl.WebExtensions.MvcExtensions;
+﻿using Sl.JsonExtensions;
+using Sl.WebExtensions.MvcExtensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
